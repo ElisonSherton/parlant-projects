@@ -1,15 +1,15 @@
 import argparse
 from parlant.client import (
-   GuidelineContent,
-   GuidelinePayload,
-   ParlantClient,
-   Payload,
+    GuidelineContent,
+    GuidelinePayload,
+    ParlantClient,
+    Payload,
 )
 from utils import *
 
 
 # Function to add the guidelines provided in the guidelines.json file
-def add_guidelines(agent_id:str):
+def add_guidelines(agent_id: str):
     """
     Adds all the guidelines specified in the guidelines.json file for the given agent.
 
@@ -31,18 +31,18 @@ def add_guidelines(agent_id:str):
         evaluation = client.evaluations.create(
             agent_id=agent_id,
             payloads=[
-            Payload(
-                kind="guideline",
-                guideline=GuidelinePayload(
-                    content=GuidelineContent(
-                        condition=condition,
-                        action=action,
+                Payload(
+                    kind="guideline",
+                    guideline=GuidelinePayload(
+                        content=GuidelineContent(
+                            condition=condition,
+                            action=action,
+                        ),
+                        operation="add",
+                        coherence_check=True,
+                        connection_proposition=True,
                     ),
-                    operation="add",
-                    coherence_check=True,
-                    connection_proposition=True,
                 )
-            )
             ],
         )
 
@@ -52,7 +52,6 @@ def add_guidelines(agent_id:str):
             wait_for_completion=120,  # Wait up to 120 seconds
         ).invoices
 
-
         # Only continue if the guideline addition was approved
         if all(invoice.approved for invoice in invoices):
             client.guidelines.create(agent_id=agent_id, invoices=invoices)
@@ -60,8 +59,13 @@ def add_guidelines(agent_id:str):
             print("Guideline was not approved:")
             print(invoices)
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Add guidelines to an agent.")
-    parser.add_argument("--agent-id", type=str, help="The ID of the agent to which the guidelines will be added.")
+    parser.add_argument(
+        "--agent-id",
+        type=str,
+        help="The ID of the agent to which the guidelines will be added.",
+    )
     args = parser.parse_args()
     add_guidelines(args.agent_id)
