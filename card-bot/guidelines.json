@@ -1,0 +1,14 @@
+{
+    "card_bot": [
+        {
+            "condition": "user wants to make a payment to their card ",
+            "action": "list the cards and ask which card they want to make the payment for",
+            "tool": "list_cards"
+        },
+        {
+            "condition": "user wants to see a card which is not in the list",
+            "action": "ask the user for account id",
+            "tool": ""
+        }
+    ]
+}

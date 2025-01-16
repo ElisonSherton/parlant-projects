@@ -1,0 +1,3 @@
+server_address: "http://localhost:8800"
+bot: "card_bot"
+service_name: "card_service"
