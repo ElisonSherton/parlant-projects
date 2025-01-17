@@ -1,12 +1,50 @@
 import argparse
+
 from parlant.client import (
     GuidelineContent,
     GuidelinePayload,
     ParlantClient,
     Payload,
 )
-from utils import *
 
+from pprint import pprint
+from utils import *
+from typing import List
+from copy import deepcopy
+
+# Function to filter the new guidelines from the set of existing guidelines added to a client
+def filter_guidelines(client: ParlantClient, agent_id: str, guidelines: List) -> List:
+    """Given an agent, and a list of guidelines, check which guidelines are already added to the agent and filter them out from the provided list of guidelines
+
+    Args:
+        client (ParlantClient): Parlant Client
+        agent_id (str): The id of the agent for which the attached guidelines will be retrived
+        guidelines (List): A list of all the guidelines to be attached to the agent with agent_id
+
+    Returns:
+        List: Filtered list of guidelines
+    """
+    attached_guidelines = client.guidelines.list(agent_id=agent_id)
+    
+    filtered_guidelines = deepcopy(guidelines)
+    guidelines_to_remove = []
+
+    for guideline in attached_guidelines:
+        condition = guideline.condition
+        action = guideline.action
+
+        for g in guidelines:
+            if (g["condition"] == condition) and (g["action"] == action):
+                guidelines_to_remove.append(g)
+                break
+    
+    for unnecessary_guideline in guidelines_to_remove:
+        filtered_guidelines.remove(unnecessary_guideline)
+    
+    # Show the filtered guidelines
+    pprint(f"Will only be attaching the following guidelines:\n{filtered_guidelines}")
+
+    return filtered_guidelines
 
 # Function to add the guidelines provided in the guidelines.json file
 def add_guidelines(agent_id: str):
@@ -25,7 +63,10 @@ def add_guidelines(agent_id: str):
 
     client = ParlantClient(base_url=config["server_address"])
 
-    for guideline in guidelines:
+    # Check if any guideline from the json object are already added, if yes, do not repeat the work
+    filtered_guidelines = filter_guidelines(client, agent_id, guidelines)
+
+    for guideline in filtered_guidelines:
         condition, action = guideline["condition"], guideline["action"]
         # Start evaluating the guideline's impact
         evaluation = client.evaluations.create(

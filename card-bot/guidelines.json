@@ -9,6 +9,11 @@
             "condition": "user wants to see a card which is not in the list",
             "action": "ask the user for account id",
             "tool": ""
+        },
+        {
+            "condition": "user wants to make a payment to their card and has provided all the necessary information",
+            "action": "make the payment and tell him the transaction id",
+            "tool": "make_payment"
         }
     ]
 }
