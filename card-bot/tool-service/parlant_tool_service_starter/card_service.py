@@ -3,7 +3,7 @@ from random import random
 from typing import Any, Optional, List
 from lagom import Container
 from uuid import uuid4
-
+from enum import Enum
 from parlant.core.background_tasks import BackgroundTaskService
 from parlant.core.services.tools.plugins import PluginServer, tool
 from parlant.core.services.tools.service_registry import ServiceRegistry
@@ -35,7 +35,6 @@ def list_cards(
     """A tool to retrieve the list of cards belonging to a particular account ID.
 
     Args:
-        context (ToolContext): Available context from the conversation
         account_id (Optional[str], optional): Account ID for which the cards need to be fetched. Defaults to the global ACCOUNT_ID.
 
     Returns:
@@ -63,25 +62,36 @@ def list_cards(
         return ToolResult({"error": f"Failed to get the list of cards\n{str(e)}"})
 
 
+class PaymentSource(Enum):
+    CHECKING = "checking"
+    SAVINGS = "savings"
+
+
 @tool
 def make_payment(
     context: ToolContext,
     card_id: str,
     payment_amount: float,
-    payment_source: str,
-    payment_date: str,
+    payment_source: PaymentSource,
+    payment_date_provided_by_customer: str,
 ) -> ToolResult:
     """Given the necessary arguments, make payment to card
-
+    
     Args:
-        context (ToolContext): Available context from the conversation
         payment_amount (float): Amount to be paid to the card in dollars
-        payment_source (str): Source of the payment i.e. checking account, external bank etc.
-        payment_date (str): When to make the payment, this date is in format DD-MM-YYYY
+        payment_source (PaymentSource): Source of the payment i.e. checking account, external bank etc.
+        payment_date_provided_by_customer (str): Customer provided date for the payment, this date is in format DD-MM-YYYY
 
     Returns:
         ToolResult: Payment acknowledgement and success message if everything goes well, otherwise a helpful error message
     """
+
+    payment_date = payment_date_provided_by_customer
+
+    if not payment_date:
+        return ToolResult(
+            {"error": "The customer needs to provide date for the payment"}
+        )
 
     # Validate the card id
     try:
