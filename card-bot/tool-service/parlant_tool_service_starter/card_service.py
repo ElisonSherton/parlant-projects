@@ -69,8 +69,7 @@ def make_payment(
     card_id: str,
     payment_amount: float,
     payment_source: str,
-    payment_date: datetime,
-    account_id: Optional[str] = ACCOUNT_ID,
+    payment_date: str,
 ) -> ToolResult:
     """Given the necessary arguments, make payment to card
 
@@ -78,8 +77,7 @@ def make_payment(
         context (ToolContext): Available context from the conversation
         payment_amount (float): Amount to be paid to the card in dollars
         payment_source (str): Source of the payment i.e. checking account, external bank etc.
-        payment_date (datetime): When to make the payment
-        account_id: (Optional[str]): The account id of the user
+        payment_date (str): When to make the payment, this date is in format DD-MM-YYYY
 
     Returns:
         ToolResult: Payment acknowledgement and success message if everything goes well, otherwise a helpful error message
@@ -87,7 +85,7 @@ def make_payment(
 
     # Validate the card id
     try:
-        available_cards = CARD_INFO[account_id]
+        available_cards = CARD_INFO[ACCOUNT_ID]
         valid_card_ids = [x["id"] for x in available_cards]
         if card_id not in valid_card_ids:
             return ToolResult(
@@ -100,6 +98,7 @@ def make_payment(
             }
         )
 
+    print("Successfully validated the card id")
     # Validate the payment amount
     try:
         assert payment_amount > 0, "Payment amount cannot be negative"
@@ -113,8 +112,10 @@ def make_payment(
             }
         )
 
+    print("Successfully validated the payment amount")
     # Validate the payment date
     try:
+        payment_date = datetime.strptime(payment_date, "%d-%m-%Y")
         assert payment_date > datetime.now(), "Payment date must be in the future"
         assert (
             payment_date - datetime.now()
@@ -128,9 +129,12 @@ def make_payment(
             }
         )
 
+    print("Successfully validated the payment date")
+
     # Perform the transaction
     try:
         transaction_id = str(uuid4())
+        print("Successfully made the payment")
         return ToolResult(
             {
                 "success": f"You have successfully made payment to your card! The transaction id is {transaction_id}. Keep this handy for future reference"

@@ -80,7 +80,7 @@ def add_guidelines(agent_id: str):
                             action=action,
                         ),
                         operation="add",
-                        coherence_check=True,
+                        coherence_check=False,
                         connection_proposition=True,
                     ),
                 )
