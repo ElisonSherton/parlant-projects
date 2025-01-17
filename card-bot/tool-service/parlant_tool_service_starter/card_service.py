@@ -25,12 +25,17 @@ CARD_INFO: dict[str, Any] = {
 }
 
 @tool
-def list_cards(context: ToolContext, account_id: str = ACCOUNT_ID) -> ToolResult:
-    """Get the list of cards linked to the given account_id, default account id is ACC234"""
+def list_cards(context: ToolContext, account_id: Optional[str] = ACCOUNT_ID) -> ToolResult:
+    """A tool to retrieve the list of cards belonging to a particular account ID. 
+
+    Args:
+        context (ToolContext): 
+        account_id (Optional[str], optional): Account ID for which the cards need to be fetched. Defaults to the global ACCOUNT_ID.
+
+    Returns:
+        ToolResult: A list of cards belonging to the provided account id if everything goes as planned. Otherwise a helpful message telling the user what went wrong and where
+    """
     print(f"Got this account id: {account_id}")
-    # if account_id == "guest":
-    #     account_id = ACCOUNT_ID
-    #     print(f"Set the account id by default to {ACCOUNT_ID}")
         
     try:
         if not account_id in CARD_INFO.keys():
@@ -39,7 +44,7 @@ def list_cards(context: ToolContext, account_id: str = ACCOUNT_ID) -> ToolResult
         print("Found account id and set global variable")
         ACCOUNT_ID = account_id
     except Exception as e:
-        return ToolResult({"error": f"failed to set the account id\n"})
+        return ToolResult({"error": f"Failed to set the account id\n"})
 
     try:
         print("Before fetching")
@@ -47,7 +52,7 @@ def list_cards(context: ToolContext, account_id: str = ACCOUNT_ID) -> ToolResult
         print("After fetching")
         return ToolResult({"success": f"Here is the list of cards for this account\n{cards}"})
     except Exception as e:
-        return ToolResult({"error": f"failed to get the list of cards\n{str(e)}"})
+        return ToolResult({"error": f"Failed to get the list of cards\n{str(e)}"})
 
 TOOLS = [
     list_cards

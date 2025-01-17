@@ -10,6 +10,15 @@ import argparse
 
 
 def fetch_tool_for_guideline(guideline: Guideline, guidelines: List) -> str:
+    """Given a guideline which is already added to a parlant agent, see if there is any tool that needs to be added to that guideline using the guidelines list and return the name of that tool
+
+    Args:
+        guideline (Guideline): A guideline attached to an agent in parlant
+        guidelines (List): A list of guidelines containing the tool information which are fetched from a json file
+
+    Returns:
+        str: Name of the tool to be attached to the fetched Guideline object
+    """
     condition = guideline.condition
     action = guideline.action
 
@@ -35,8 +44,10 @@ def attach_tools(agent_id: str):
     # Get all the guidelines attached to a particular tool
     client = ParlantClient(base_url=config["server_address"])
     guidelines_client = client.guidelines.list(agent_id=agent_id)
+    print(guidelines_client)
 
     for guideline in guidelines_client:
+        print(guideline)
         tool_name = fetch_tool_for_guideline(guideline, guidelines_json)
         if tool_name:
             print(f"Tool fetched: {tool_name}\n\n")
@@ -63,3 +74,4 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
     attach_tools(args.agent_id)
+    print("Attached tools")
