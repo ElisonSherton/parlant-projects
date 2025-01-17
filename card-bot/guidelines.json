@@ -1,7 +1,7 @@
 {
     "card_bot": [
         {
-            "condition": "user wants to make a payment to their card",
+            "condition": "user wants to pay the credit card bill",
             "action": "list the cards and ask which card they want to make the payment for",
             "tool": "list_cards"
         },
@@ -11,9 +11,14 @@
             "tool": "list_cards"
         },
         {
-            "condition": "user wants to make a payment to their card and has provided the card details",
+            "condition": "user wants to pay credit card bill and has provided the card details",
             "action": "make the payment",
             "tool": "make_payment"
+        },
+        {
+            "condition": "user wants to make a payment with their card",
+            "action": "tell that I can help you with that",
+            "tool": ""
         }
     ]
 }
