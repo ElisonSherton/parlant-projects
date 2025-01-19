@@ -12,28 +12,48 @@
         },
         {
             "condition": "user wants to pay credit card bill",
-            "action": "ensure that you get the payment amount from user",
+            "action": "determine the payment amount from user",
             "tool": ""
         },
         {
             "condition": "user wants to pay credit card bill and has specified the payment amount",
-            "action": "ensure that you get the payment date from the user",
+            "action": "determine the payment date from the user",
             "tool": ""
         },
         {
             "condition": "user wants to pay credit card bill and has specified the payment amount and payment date",
-            "action": "ensure that you get the payment source from the user",
+            "action": "determine the payment source from the user",
             "tool": ""
         },
         {
             "condition": "user wants to pay credit card bill and has specified the payment amount and payment date and payment source i.e. checking account or savings account",
             "action": "make the payment",
-            "tool": "make_payment"
+            "tool": "make_payment_to_card"
         },
         {
             "condition": "user wants to make a payment with their card",
             "action": "tell that I can help you with that",
             "tool": ""
+        },
+        {
+            "condition": "user wants to make a payment through their checking account",
+            "action": "ask them for the beneficiary name",
+            "tool": ""
+        },
+        {
+            "condition": "user wants to make a payment through their checking account and has provided the beneficiary name",
+            "action": "ask them for the payment amount",
+            "tool": ""
+        },
+        {
+            "condition": "user wants to make a payment through their checking account and has provided the beneficiary name and the payment amount",
+            "action": "make the payment and tell them the status of the payment",
+            "tool": "make_payment_to_card"
+        },
+        {
+            "condition": "user wants to list their checking account transactions",
+            "action": "provide the user with their transactions",
+            "tool": "list_transactions"
         }
     ]
 }
