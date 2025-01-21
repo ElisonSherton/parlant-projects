@@ -7,6 +7,9 @@ __pycache__/
 runtime-data*/
 parlant-data/
 .ipynb_checkpoints/
+parlant-qna-db.json
+parlant-qna.log
+TO_CHECK.md
 
 # C extensions
 *.so
