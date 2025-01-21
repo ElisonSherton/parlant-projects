@@ -2,7 +2,7 @@
     "card_bot": [
         {
             "condition": "user wants to pay the credit card bill",
-            "action": "list the cards and ask which card they want to make the payment for",
+            "action": "list the cards and determine which card they want to make the payment for",
             "tool": "list_cards"
         },
         {
@@ -11,49 +11,64 @@
             "tool": "list_cards"
         },
         {
-            "condition": "user wants to pay credit card bill",
-            "action": "determine the payment amount from user",
+            "condition": "user wants to pay the credit card bill",
+            "action": "determine the payment date, payment source and account id and payment source from the user",
             "tool": ""
         },
         {
-            "condition": "user wants to pay credit card bill and has specified the payment amount",
-            "action": "determine the payment date from the user",
-            "tool": ""
-        },
-        {
-            "condition": "user wants to pay credit card bill and has specified the payment amount and payment date",
-            "action": "determine the payment source from the user",
-            "tool": ""
-        },
-        {
-            "condition": "user wants to pay credit card bill and has specified the payment amount and payment date and payment source i.e. checking account or savings account",
+            "condition": "user wants to pay credit card bill and has specified the account id and  payment amount and payment date and payment source i.e. checking account or savings account",
             "action": "make the payment",
             "tool": "make_payment_to_card"
         },
         {
-            "condition": "user wants to make a payment with their card",
-            "action": "tell that I can help you with that",
+            "condition": "user wants to know their checking account balance",
+            "action": "fetch the account balance and tell the user their balance",
+            "tool": "get_checking_account_balance"
+        },
+        {
+            "condition": "when the customer suggests suspicious activity on their account",
+            "action": "offer to pull up the recent transactions for review",
             "tool": ""
         },
         {
-            "condition": "user wants to make a payment through their checking account",
-            "action": "ask them for the beneficiary name",
+            "condition": "user wants to make a payment to a beneficiary",
+            "action": "determine the account id, beneficiary name and payment amount from the user",
             "tool": ""
         },
         {
-            "condition": "user wants to make a payment through their checking account and has provided the beneficiary name",
-            "action": "ask them for the payment amount",
-            "tool": ""
-        },
-        {
-            "condition": "user wants to make a payment through their checking account and has provided the beneficiary name and the payment amount",
+            "condition": "user wants to make a payment to a beneficiary and has provided the account id and the beneficiary name and the payment amount",
             "action": "make the payment and tell them the status of the payment",
-            "tool": "make_payment_to_card"
+            "tool": "make_payment_to_beneficiary"
         },
         {
             "condition": "user wants to list their checking account transactions",
             "action": "provide the user with their transactions",
             "tool": "list_transactions"
+        },
+        {
+            "condition": "user asks a new question pertaining to banking",
+            "action": "lookup the answer and if found, provide the answer to the user",
+            "tool": ""
+        },
+        {
+            "condition": "user asks a non banking related question",
+            "action": "apologize and tell the user that the bot is only programmed to answer banking related questions",
+            "tool": ""
+        },
+        {
+            "condition": "user is sounding very distressed",
+            "action": "before offering any help, ask if they would directly speak to a human",
+            "tool": ""
+        },
+        {
+            "condition": "user speaks in any language except English or Spanish",
+            "action": "do not offer any help and inform them you can only speak English and Spanish",
+            "tool": ""
+        },
+        {
+            "condition": "user's message contains a spelling mistake",
+            "action": "seek confirmation before you help",
+            "tool" : ""
         }
     ]
 }

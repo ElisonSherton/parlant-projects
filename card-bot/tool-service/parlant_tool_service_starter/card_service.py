@@ -222,20 +222,21 @@ def list_cards(context: ToolContext, account_id: Optional[str] = None) -> ToolRe
     global CC_ACCOUNT_ID
 
     if account_id is None:
-        account_id = ACCOUNT_ID
+        account_id = CC_ACCOUNT_ID
+    CC_ACCOUNT_ID = account_id
 
     try:
         if not account_id in CARD_INFO.keys():
             print("Not found account id in card info")
             return ToolResult({"error": "provided account id not found"})
         print("Found account id and set global variable")
-        ACCOUNT_ID = account_id
+        CC_ACCOUNT_ID = account_id
     except Exception as e:
         return ToolResult({"error": f"Failed to set the account id\n"})
 
     try:
         print("Before fetching")
-        cards = CARD_INFO[ACCOUNT_ID]
+        cards = CARD_INFO[CC_ACCOUNT_ID]
         print("After fetching")
         return ToolResult(
             {"success": f"Here is the list of cards for this account\n{cards}"}
@@ -277,7 +278,7 @@ def make_payment_to_card(
 
     # Validate the card id
     try:
-        available_cards = CARD_INFO[ACCOUNT_ID]
+        available_cards = CARD_INFO[CC_ACCOUNT_ID]
         valid_card_ids = [x["id"] for x in available_cards]
         if card_id not in valid_card_ids:
             return ToolResult(
@@ -341,6 +342,42 @@ def make_payment_to_card(
 
 
 @tool
+def get_checking_account_balance(
+    context: ToolContext, account_id: Optional[str] = None
+) -> ToolResult:
+    """A tool to retrieve the balance of a checking account.
+
+    Args:
+        account_id (Optional[str], optional): Account ID for which the balance needs to be fetched. Defaults to None.
+
+    Returns:
+        ToolResult: The balance of the provided account id if everything goes as planned. Otherwise a helpful message telling the user what went wrong and where
+    """
+    global CHECKING_ACCOUNT_ID
+
+    if account_id is None:
+        account_id = CHECKING_ACCOUNT_ID
+    CHECKING_ACCOUNT_ID = account_id
+
+    try:
+        if not account_id in CHECKINGS_ACCOUNT_BALANCE.keys():
+            print("Not found account id in checking account balance")
+            return ToolResult({"error": "provided account id not found"})
+        print("Found account id and set global variable")
+        ACCOUNT_ID = account_id
+    except Exception as e:
+        return ToolResult({"error": f"Failed to set the account id\n"})
+
+    try:
+        balance = CHECKINGS_ACCOUNT_BALANCE[ACCOUNT_ID]
+        return ToolResult(
+            {"success": f"The balance for the given account is {balance}"}
+        )
+    except Exception as e:
+        return ToolResult({"error": f"Failed to get the account balance\n{str(e)}"})
+
+
+@tool
 def make_payment_to_beneficiary(
     context: ToolContext,
     beneficiary: str,
@@ -357,7 +394,7 @@ def make_payment_to_beneficiary(
     Returns:
         ToolResult: Payment acknowledgement and success message if everything goes well, otherwise a helpful error message.
     """
-    global ACCOUNT_BALANCE, CHECKING_ACCOUNT_BALANCE
+    global ACCOUNT_BALANCE, CHECKING_ACCOUNT_BALANCE, CHECKING_ACCOUNT_ID
 
     if account_id is None:
         account_id = CHECKING_ACCOUNT_ID
@@ -424,6 +461,7 @@ TOOLS = [
     make_payment_to_card,
     make_payment_to_beneficiary,
     list_transactions,
+    get_checking_account_balance,
 ]
 
 
