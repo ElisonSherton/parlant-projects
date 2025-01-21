@@ -1,0 +1,46 @@
+{
+  "How to use Samsung Pay FAQs | Digital Payments | Chase": {
+    "FAQs": [
+      {
+        "question": "What is Samsung Pay?",
+        "answer": "Samsung Pay provides owners of select Samsung Galaxy devices the ability to use their Galaxy phone to make payments almost anywhere you can swipe or tap your Chase credit, debit and/or Chase Liquid cards."
+      },
+      {
+        "question": "How does Samsung Pay Work?",
+        "answer": "Select Samsung Galaxy devices are equipped with Near Field communication technology (NFC) that transmits the tokenized version of the credit card / debit card payment credentials securely to a merchant terminal. In addition to NFC, Samsung Pay supports a new proprietary technology, Magnetic Secured Transmission (MST) which transmits the same secure tokenized credit card / debit card payment credentials."
+      },
+      {
+        "question": "How do I get Samsung Pay on my Device?",
+        "answer": "Samsung Pay is available with the Galaxy Note8, S8, S7, S7 edge, S6, S6 active, S6 edge+, S6 edge, Note5, Gear S2 (with NFC only) and Gear S3 through an app update. The availability will vary by mobile network operator. The app will appear when the customers install the operating system update. Samsung Pay will be a preloaded app on upcoming Samsung Iconic devices. The app is not available for download on unsupported devices."
+      },
+      {
+        "question": "How do I add my Chase cards to Samsung Pay?",
+        "answer": "1. Choose the Samsung Pay icon, and log in using your Samsung account information. 2. If you do not already have a Samsung account, you can create one. 3. Once logged in you can, touch ADD CARD in Samsung Pay app to begin the process of adding your card. 4. Center the card in the on-screen window and Samsung Pay will read the card number. Or you can enter the card number manually. 5. Verify or enter the additional information such has Cardholder Name, Expiration Date and Security Code (CVV). 6. Accept the Terms and Conditions for adding a card to a digital wallet by touching AGREE TO ALL. 7. You may be prompted to select a delivery method for receiving a One Time Passcode, such as SMS or EMAIL or CALL IN. 8. The One Time Passcode will be delivered to the destination selected. Enter the code received and touch SUBMIT. Once complete, your card is ready for use in Samsung Pay."
+      },
+      {
+        "question": "How do I pay using Samsung Pay?",
+        "answer": "1. Once your eligible Chase card is registered to Samsung Pay, you may access Favorite Cards by swiping up from the bottom of your screen. 2. The most recently added or used card is displayed. Swipe left or right to scroll through your registered payment cards. 3. When you have the desired card selected, place your finger on the Home button. To use your Samsung Pay PIN, touch PIN. Then, enter your four-digit PIN. Samsung Pay will indicate that you are ready to make a payment."
+      },
+      {
+        "question": "Is there a fee associated with using a Chase card with Samsung Pay?",
+        "answer": "There is no cost to use Samsung Pay from Chase; however, an active data plan is required. Based on your wireless plan and mobile carrier's offering, additional message and data charges may apply. Your credit card terms and conditions, your debit card Deposit Account Agreement or your Chase Liquid agreement will apply for purchases. Chase does not charge any fees to add your credit, debit and/or Chase Liquid cards to Samsung Pay."
+      },
+      {
+        "question": "Can I use Samsung Pay outside of the United States?",
+        "answer": "As long as you're shopping at a participating retailer, Samsung Pay will work outside of the U.S. Based on your wireless plan and mobile carrier's offering, additional message data charges and foreign transaction fees may apply."
+      },
+      {
+        "question": "Can a Samsung Pay token be used for recurring charges, subscriptions or bills (Netflix, Amazon Prime, etc)?",
+        "answer": "This service is not currently available."
+      },
+      {
+        "question": "What is Near Field Communication (NFC) Technology?",
+        "answer": "Near Field Communication (NFC) is a short-range wireless technology that allows two devices to exchange payment information quickly and conveniently at close proximity. Samsung Pay uses NFC technology or MST to transmit payment information from your phone to the contactless payment terminal."
+      },
+      {
+        "question": "What is Magnetic Secured Transmission (MST) Technology?",
+        "answer": "Magnetic Secure Transmission (MST) replicates swiping a physical card at the payment terminal by securely sending payment information directly to the magnetic strip card reader without touching it. Samsung Pay uses NFC technology or MST to transmit payment information from your phone to the contactless payment terminal."
+      }
+    ]
+  }
+}

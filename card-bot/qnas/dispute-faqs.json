@@ -1,0 +1,46 @@
+{
+  "Dispute FAQs | Credit Card | Chase.com": {
+    "FAQs": [
+      {
+        "question": "How do I stop or cancel a charge?",
+        "answer": "The quickest way to stop or cancel a charge is to contact the merchant directly. If the charge posts and you wish to dispute, you may sign in to Chase.com or call the number on the back of your credit card."
+      },
+      {
+        "question": "Can I dispute a charge online?",
+        "answer": "You can learn more about disputing a transaction. How to access more details about your transaction."
+      },
+      {
+        "question": "Can I dispute a pending charge?",
+        "answer": "Credit card: Charge must be posted in order for a dispute to be opened. Pending charges generally post within 1-3 business days. If the charge posts and you wish to dispute, you may do so online at Chase.com or call the number on the back of your credit card. Debit card: You can call us at 1-866-564-2262 to initiate a debit card dispute for a pending transaction. You'll need to wait for the debit card transaction to post before you can dispute it online."
+      },
+      {
+        "question": "How long do I have to dispute a charge?",
+        "answer": "Submit your dispute within 60 days of the transaction first appearing on your statement."
+      },
+      {
+        "question": "How long will it take to resolve a dispute?",
+        "answer": "The time it takes to resolve your dispute depends on the type of dispute and the merchant, but it may take up to 90 days for credit card and/or debit card disputes. Keep in mind, disputes are often resolved more quickly if you contact the merchant first."
+      },
+      {
+        "question": "Can I cancel a dispute I already submitted?",
+        "answer": "To cancel a dispute, call the number on the back of your card. We also accept operator relay calls."
+      },
+      {
+        "question": "Do I have to pay the disputed amount while the credit card dispute is being investigated?",
+        "answer": "You are not required to pay for transactions and associated interest or fees that are being disputed and under investigation. While the transaction is in dispute, this amount will be removed from your required payment until it is resolved. However, you are still responsible for paying at least the minimum payment due for your remaining undisputed balance."
+      },
+      {
+        "question": "Will I have access to the disputed funds while the debit card dispute is being investigated?",
+        "answer": "Most of the time, a provisional credit will be applied to the account while we investigate the debit card dispute. This usually occurs within 48 hours but may take up to 10 business days."
+      },
+      {
+        "question": "What do I do when I see a potential fraudulent charge?",
+        "answer": "If you identify a transaction as potentially fraudulent, you can Report a Problem and follow these steps. If your card is lost or stolen, or you think someone used your account without permission, tell us immediately by calling 1-866-564-2262 for debit card customers, 1-800-955-9060 for credit card customers, and 1-888-269-8690 for business credit card customers."
+      },
+      {
+        "question": "How do I remove pending charges from my account?",
+        "answer": "Only a merchant can cancel your pending transaction."
+      }
+    ]
+  }
+}

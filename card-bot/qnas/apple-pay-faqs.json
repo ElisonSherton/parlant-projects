@@ -1,0 +1,42 @@
+{
+  "How to use Apple Pay FAQs | Digital Payments | Chase": {
+    "FAQs": [
+      {
+        "question": "What is Apple Pay?",
+        "answer": "Apple Pay is a payments feature integrated into the Wallet app on your iOS device that lets you add your credit, debit and/or Chase Liquid cards to Apple Pay to make purchases at participating retailers in stores, using Near Field Communication (NFC) technology, or in app."
+      },
+      {
+        "question": "How does Apple Pay work?",
+        "answer": "To add your eligible Chase credit, debit and/or Chase Liquid cards to Apple Pay, follow the Apple Pay instructions. Apple Pay provides the same benefits and protection as your physical card, with the convenience of making secure transactions on your iOS device. Use Apple Pay anywhere contactless payments are accepted and to make purchases in app with participating apps."
+      },
+      {
+        "question": "Which of my devices are compatible with Apple Pay?",
+        "answer": "You can use Apple Pay in stores on your iPhone X, iPhone 8, iPhone 8 Plus, iPhone 7, iPhone 7 Plus, iPhone 6, iPhone 6S, iPhone 6 Plus, iPhone 6S Plus, and Apple Watch with compatible iPhone 5 or later & Apple Watch Series 3, 2 & 1. Apple Pay can also be used in-app with your iPhone X, iPhone 8, iPhone 8 Plus, iPhone 7, iPhone 7 Plus, iPhone 6, iPhone 6S, iPhone 6 Plus, iPhone 6S Plus, iPad Air 2, iPad Pro, iPad mini 3, iPad mini 4, Apple Watch with compatible iPhone 5 or later and Apple Watch Series 3, 2 & 1. You can use also use Apple Pay on the web in Safari with MacBook Pro with Touch ID and Mac Model introduced in 2012 or later with Apple Pay-enabled iPhone or Apple Watch."
+      },
+      {
+        "question": "How do I get Apple Pay on my device?",
+        "answer": "Apple Pay is integrated into the Wallet app, which comes pre-installed on your eligible iPhone X, iPhone 8, iPhone 8 Plus, iPhone 7, iPhone 7 Plus, iPhone 6, iPhone 6S, iPhone 6 Plus, iPhone 6S Plus, iPad Air 2, iPad Pro, iPad mini 3, and iPad mini 4. You will be given an opportunity to configure Apple Pay upon setup of your new device. If you already have established an iTunes account, the credit card that is on file will be made available to you to immediately upon Apple Pay setup. You will have the ability to add additional eligible Chase credit, debit and/or Chase Liquid cards by using the iSight camera to instantly capture your card details or by entering them manually. Please note, Apple Pay on the Apple Watch won't be set up through Wallet. You can load your Chase cards to the Apple Watch app on the paired iPhone. An alert will be displayed on the watch upon card activation."
+      },
+      {
+        "question": "How do I pay using Apple Pay?",
+        "answer": "To make an in-store purchase with your iPhone X, iPhone 8, iPhone 8 Plus, iPhone 7, iPhone 7 Plus, iPhone 6, iPhone 6S, iPhone 6 Plus, or iPhone 6S Plus, just hold your device near the contactless reader with your finger while holding down Touch ID. A subtle vibration and beep will confirm the transaction is complete. To make an in-store purchases with your iPhone X, double-tap the side button, then glance at iPhone X to authenticate with Face ID or enter your passcode. Hold the top of iPhone X within a few centimeters of the contactless reader until you see done and checkmark on the display. To make an in-store purchase with your Apple Watch, double-tap the side button and hold the face of your device near the contactless reader. A gentle pulse and tone confirm that the transaction is complete. To make a purchase in-app with your iPhone X, iPhone 8, iPhone 8 Plus, iPhone 7, iPhone 7 Plus, iPhone 6, iPhone 6S, iPhone 6 Plus, iPhone 6S Plus, iPad Air 2, iPad Pro, iPad mini 3, or iPad mini 4 & Apple Watch, Tap the buy with Apple or Apple Pay Button or Choose Apple Pay as your payment method. To authenticate the Apple Payment, you will do the following below: iPhone X: Double tap the side button then use face id or your passcode. iPhone 8 or earlier or iPad: Use touch id or your passcode. Apple Watch: Double tap side button. MacBook Pro with touch ID: Use touch id. If touch ID is off, tap the Apple Pay icon on the touch bar and follow the prompts on the screen."
+      },
+      {
+        "question": "Is there a fee associated with using a Chase card with Apple Pay?",
+        "answer": "There is no cost for Apple Pay from Chase; however, an active data plan is required. Based on your wireless plan and mobile carrier's offering, additional message and data charges may apply. Your credit card terms and conditions, your debit card Deposit Account Agreement or your Chase Liquid agreement will apply for purchases. Chase doesn't charge any fees to add your credit, debit and/or Chase Liquid cards to Apple Pay."
+      },
+      {
+        "question": "Can I use Apple Pay outside of the United States?",
+        "answer": "As long as you're shopping at a participating retailer, Apple Pay will work outside of the U.S. Based on your wireless plan and mobile carrier's offering, additional message data charges and foreign transaction fees may apply."
+      },
+      {
+        "question": "Can an Apple Pay token be used for recurring charges, subscriptions or bills (Netflix, Amazon Prime, etc.)?",
+        "answer": "This service isn't currently available."
+      },
+      {
+        "question": "What is Near Field Communication (NFC) technology?",
+        "answer": "Near Field Communication (NFC) is a short-range wireless technology that allows two devices to exchange payment information quickly and conveniently at close proximity. Apple Pay uses NFC technology to transmit payment information from your phone to the contactless payment terminal."
+      }
+    ]
+  }
+}

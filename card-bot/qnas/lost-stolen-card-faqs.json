@@ -1,0 +1,30 @@
+{
+  "Lost Or Stolen Card Apple Pay FAQs | Digital Payments | Chase": {
+    "FAQs": [
+      {
+        "question": "What if my card is lost or stolen?",
+        "answer": "Separate contact information exists for Credit Card and Personal Banking accounts. Credit Card: If your card has been lost, stolen or damaged, call us immediately at 1-800-432-3117. Go to chase.com/customerservice for call center hours. Personal Banking: If your card has been lost, stolen or damaged, call us immediately at 1-800-935-9935. Go to chase.com/customerservice for call center hours. To request a replacement card, choose Replace card and follow the instructions. We'll send you a replacement card that will arrive within 3-5 days. If you ordered your card more than 5 days ago, please call us using the number on your statement. We accept operator relay calls."
+      },
+      {
+        "question": "What should I do about Apple Pay if my card is lost or stolen?",
+        "answer": "If your card is lost or stolen, choose 'Contact Chase' from your card in Apple Wallet or use the phone number on the back of your card to contact Chase immediately. We'll help you replace your lost or stolen card as well as ensure your lost or stolen card in Apple Pay is replaced."
+      },
+      {
+        "question": "What if my device is lost or stolen?",
+        "answer": "If your device is lost or stolen, you can suspend Apple Pay by using the 'Find my iPhone' app or going to www.icloud.com and choosing the option for 'Lost Mode.' You'll also be given the option to 'Erase All' on www.icloud.com. This will delete all cards from Apple Pay and the Secure Element. If in doubt regarding the status of your Chase cards in Apple Pay, please contact Chase by using the number on the back of your card. If you find your phone, you can unsuspend Apple Pay by following the prompts on your phone or through the 'Find my iPhone' app."
+      },
+      {
+        "question": "What happens when I replace or update my device?",
+        "answer": "If you replace or update your device, you'll need to add your card(s) again to Wallet as new Apple Pay setup."
+      },
+      {
+        "question": "What happens when my card is replaced?",
+        "answer": "Whether your card is replaced because it is lost or stolen, or if the card has expired, in most cases your new card will be automatically associated to the existing Digital Account Number (Token) in your device, and continue to be used for payments in Apple Pay. If, for some reason, Chase could not re-add your new card to the existing Digital Account Number (Token), you'll see a notation in the Apple Pay App that the card isn't active for use. You can then re-add your card, as you did initially to make it active again."
+      },
+      {
+        "question": "How do I make returns with purchases I've made using Apple Pay?",
+        "answer": "You can make a return the same way you would with your plastic card today by contacting the merchant directly. We do recommend you bring the device that you used when returning items purchased with Apple Pay."
+      }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "Balance Transfers | Credit Cards | Chase.com": {
+    "FAQs": [
+      {
+        "question": "What can I use a balance transfer for?",
+        "answer": [
+          "Pay off higher-rate credit cards. Pick which cards you want to pay down and then transfer the balance to your Chase card with an eligible lower rate.",
+          "Consolidate balances. Make managing your finances easier by combining several credit card balances into one.",
+          "Pay for unexpected expenses or get cash. If you've received balance transfer checks, you can use them to pay for things you need or to get cash. If eligible, you can also sign in to Chase.com or call the number on the back of your card to transfer funds into a qualifying checking account. Successful payment history must be established for checking accounts you wish to use for transfers."
+        ]
+      },
+      {
+        "question": "What are the benefits of a balance transfer?",
+        "answer": [
+          "Pay less interest. By transferring a higher-rate credit card balance to a lower-rate credit card, you can end up paying less interest in the long run.",
+          "Pay off your balances. With our low rate balance transfer offers, you can put more of your payment toward the balance and less toward interest.",
+          "Streamline monthly payments. Making payments each month is easier when you have fewer bills to manage from multiple credit cards."
+        ]
+      },
+      {
+        "question": "What happens after I request a balance transfer?",
+        "answer": [
+          "Most transfers are processed within a week, but in some cases it can take up to 21 days.",
+          "Remember to stay current on your credit card payments with other creditors until your balance transfer has posted to your Chase account."
+        ]
+      },
+      {
+        "question": "Can balance transfers be used to pay other Chase credit cards or loans?",
+        "answer": "No, balance transfers may not be used to pay other credit cards or loans issued by JPMorgan Chase Bank, N.A., or any of our affiliates."
+      },
+      {
+        "question": "When will the balance transfer post to my account?",
+        "answer": "Most balance transfers will post to your account within a week to 21 days. This time frame is dependent on how quickly the payee processes the transferred amount. Please continue to make payments on that account until you know the transferred amount has posted and the balance has been paid."
+      },
+      {
+        "question": "If I take advantage of an offer, will it affect future interest charges on my new purchases?",
+        "answer": "Prior to taking advantage of any offer, if you did not have a balance or if you paid your balance in full each month, you did not pay interest on your new purchases. This is referred to as an interest-free period (also called a grace period). If you take this offer and do not pay off your entire balance each month (including the promotional balances that you add by using this offer), you will lose that interest-free period. This means that you will begin paying interest on all new purchases, even if you pay your purchase balance in full each month. New purchases include any fees added to your purchase balance, such as an annual fee, if applicable."
+      },
+      {
+        "question": "When will interest from this offer begin to apply to my account?",
+        "answer": "Interest will begin to accrue from the day the online transaction posts to your account."
+      },
+      {
+        "question": "Under what circumstances can you decline balance transfers I've requested?",
+        "answer": "We may decline your transfer request under the following circumstances: your account is past due or over limit, you request more than the maximum amount disclosed, we reasonably believe that you will be unable or unwilling to repay the balance, or for any other reason as described in your Cardmember Agreement."
+      },
+      {
+        "question": "How are my payments allocated?",
+        "answer": "Generally, we first apply an amount equal to your minimum payment to the balance on your monthly statement with the lowest APR, which may be the amount you add by transferring a balance. Any payment above your minimum payment would generally then be applied to the balance on your monthly statement with the highest APR first. Payments are applied to balances as they appear on your monthly statement before being applied to new transactions."
+      },
+      {
+        "question": "If I recently had my card replaced because it was lost or stolen, can I still request a balance transfer?",
+        "answer": "Yes. You can still request a balance transfer by calling the number on the back of your card or by signing in above."
+      },
+      {
+        "question": "Will I earn rewards or rebates?",
+        "answer": "No, balance transfers do not earn rewards or rebates."
+      }
+    ]
+  }
+}
