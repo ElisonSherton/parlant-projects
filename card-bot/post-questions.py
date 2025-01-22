@@ -32,7 +32,7 @@ def process_json_file(filepath):
                 print()
                 print(f"Posted question: {faq['question']}")
                 print(f"Status code: {response.status_code}")
-                if response.status_code != 200:
+                if not str(response.status_code).startswith("2"):
                     print(f"Error response: {response.text}")
             except Exception as e:
                 print(f"Error posting question: {faq['question']}")
