@@ -12,7 +12,7 @@
         },
         {
             "condition": "user wants to pay the credit card bill",
-            "action": "determine the payment date, payment source and account id and payment source from the user",
+            "action": "determine the payment date, payment source and account id and payment amount from the user",
             "tool": ""
         },
         {
