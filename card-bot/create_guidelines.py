@@ -12,6 +12,7 @@ from utils import *
 from typing import List
 from copy import deepcopy
 
+
 # Function to filter the new guidelines from the set of existing guidelines added to a client
 def filter_guidelines(client: ParlantClient, agent_id: str, guidelines: List) -> List:
     """Given an agent, and a list of guidelines, check which guidelines are already added to the agent and filter them out from the provided list of guidelines
@@ -25,7 +26,7 @@ def filter_guidelines(client: ParlantClient, agent_id: str, guidelines: List) ->
         List: Filtered list of guidelines
     """
     attached_guidelines = client.guidelines.list(agent_id=agent_id)
-    
+
     filtered_guidelines = deepcopy(guidelines)
     guidelines_to_remove = []
 
@@ -37,14 +38,20 @@ def filter_guidelines(client: ParlantClient, agent_id: str, guidelines: List) ->
             if (g["condition"] == condition) and (g["action"] == action):
                 guidelines_to_remove.append(g)
                 break
-    
+
     for unnecessary_guideline in guidelines_to_remove:
         filtered_guidelines.remove(unnecessary_guideline)
-    
+
     # Show the filtered guidelines
-    pprint(f"Will only be attaching the following guidelines:\n{filtered_guidelines}")
+    pprint(f"Will only be attaching the following guidelines out of all the provided guidelines since the remaining ones are already added:\n")
+    for guideline in filtered_guidelines:
+        pprint(f"Condition: {guideline['condition']}")
+        pprint(f"Action: {guideline['action']}")
+        pprint(f"Tool: {guideline['tool']}")
+        print()
 
     return filtered_guidelines
+
 
 # Function to add the guidelines provided in the guidelines.json file
 def add_guidelines(agent_id: str):
@@ -81,7 +88,7 @@ def add_guidelines(agent_id: str):
                         ),
                         operation="add",
                         coherence_check=False,
-                        connection_proposition=True,
+                        connection_proposition=False,
                     ),
                 )
             ],
