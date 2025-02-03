@@ -12,12 +12,7 @@
         },
         {
             "condition": "user wants to pay the credit card bill",
-            "action": "determine the payment date, payment source and account id and payment amount from the user",
-            "tool": ""
-        },
-        {
-            "condition": "user wants to pay credit card bill and has specified the account id and  payment amount and payment date and payment source i.e. checking account or savings account",
-            "action": "make the payment",
+            "action": "determine the necessary arguments and make the payment",
             "tool": "make_payment_to_card"
         },
         {
@@ -32,12 +27,7 @@
         },
         {
             "condition": "user wants to make a payment to a beneficiary",
-            "action": "determine the account id, beneficiary name and payment amount from the user",
-            "tool": ""
-        },
-        {
-            "condition": "user wants to make a payment to a beneficiary and has provided the account id and the beneficiary name and the payment amount",
-            "action": "make the payment and tell them the status of the payment",
+            "action": "determine the necessary arguments and make the payment",
             "tool": "make_payment_to_beneficiary"
         },
         {
