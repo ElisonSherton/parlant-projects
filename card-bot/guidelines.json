@@ -27,7 +27,7 @@
         },
         {
             "condition": "user wants to make a payment to a beneficiary",
-            "action": "determine the necessary arguments and make the payment",
+            "action": "assist the user to complete the transaction",
             "tool": "make_payment_to_beneficiary"
         },
         {

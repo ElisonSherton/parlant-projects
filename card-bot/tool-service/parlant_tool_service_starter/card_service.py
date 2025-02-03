@@ -380,14 +380,14 @@ def get_checking_account_balance(
 @tool
 def make_payment_to_beneficiary(
     context: ToolContext,
-    beneficiary: str,
+    beneficiary_name: str,
     amount_to_transfer: float,
     account_id: Optional[str] = None,
 ) -> ToolResult:
     """Make a payment to a beneficiary.
 
     Args:
-        beneficiary (str): The beneficiary to whom the payment is to be made.
+        beneficiary_name (str): The name of the beneficiary to whom the payment is to be made.
         amount_to_transfer (float): The amount to transfer.
         account_id (Optional[str], optional): The account ID from which the payment is to be made. Defaults to None.
 
@@ -402,7 +402,7 @@ def make_payment_to_beneficiary(
 
     # Validate the beneficiary
     valid_beneficiaries = [b["name"] for b in BENEFICIARIES]
-    if beneficiary.lower() not in valid_beneficiaries:
+    if beneficiary_name.lower() not in valid_beneficiaries:
         return ToolResult(
             {
                 "error": "The selected beneficiary is not present in your list of beneficiaries. Please add the beneficiary before making the payment"
@@ -429,7 +429,7 @@ def make_payment_to_beneficiary(
         transaction_id = str(uuid4())[:4]
         transaction_date = datetime.now().strftime("%d-%m-%Y")
         transaction = {
-            "beneficiary": beneficiary,
+            "beneficiary": beneficiary_name,
             "transaction_amount": amount_to_transfer,
             "transaction_id": transaction_id,
             "transaction_date": transaction_date,
