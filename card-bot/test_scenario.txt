@@ -1,0 +1,25 @@
+Scenario: The agent doesnt apply the "user wants to pay the credit card" guideline
+    Given an agent named "Yam 4.0" whose job description is to "be a Helpful digital assistant supposed to help with digital banking related queries, If the user's message is sounding like a question for instance if it starts with a 'how to, how can I, what is, when can I, when will my' etc., then prefer to lookup the answer."
+    And a customer with the name "Beef Wellington"
+    And an empty session with "Beef Wellingotn"
+    And the term "Digital Wallet" defined as "Samsung Pay, Google Pay, Apple Pay, PhonePe, Paytm are digital wallets"
+    And the term "bot's skills" defined as The bot can ONLY help the user with listing their cards, making payment to their cards/paying credit card bill, making payment to a beneficiary, listing their checking account transactions and checking their account balance
+    And a guideline to determine the payment date from the user when the user wants to pay the credit card bill
+    And a guideline to determine the payment source from the user when the user wants to pay the credit card bill and has provided payment date
+    And a guideline to determine the account id from the user when the user wants to pay the credit card bill and has provided payment date and payment source
+    And a guideline to determine the payment amount from the user when the user wants to pay the credit card bill and has provided payment date and payment source and the account id
+    And a guideline "g1" to make the payment when the user wants to pay the credit card bill and has provided payment date and payment source and the account id
+    And the tool "make_payment_to_card""
+    And an association between "g1" and "make_payment_to_card"
+    And a customer message, "Card payment"
+    And an agent message, "To proceed with your card payment, please let me know which card you would like to pay from.\nHere are your available cards: Visa ending in 5432 with a balance of $2,500.00\nAmex ending in 9876 with a balance of $3,500.00\nAlso, could you please specify the payment date?"
+    And a customer message, "None of these"
+    And an agent message, "It seems the card you want to use isn't listed. Could you please provide your account ID so I can locate the correct card for you? Also, let me know the payment date you'd like to set for the credit card bill."
+    And a customer message, "Why do you need my account ID?"
+    And an agent message, "We request your account ID to ensure we are accessing the correct account and card details for your payment. This helps us maintain security and accuracy in processing your transactions. Let me know if you have any other questions or concerns!"
+    And a customer message, "Oh I see, ok. account ID is CC_ACC234 and 300$"
+    And an agent message, "Thank you for providing your account ID. Here are the cards associated with your account:\nVisa ending in 5432 with a balance of $2,500\nAmex ending in 9876 with a balance of $3,500\nPlease let me know which card you would like to use for the $300 payment."
+    And a customer message, "The Amex one and through checking account"
+    When processing is triggered
+    Then a single message event is emitted
+    And the message contains the account id, payment amount, payment source, card to which the payment needs to be made and asks for the payment date
